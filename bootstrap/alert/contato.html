@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt" class="h-100">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Sobre</title>
+  </head>
+  <body class="h-100 d-flex flex-column">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="#">Cleviane Rebeca</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="inicio.html">Início </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre.html">Sobre </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="contato.html">Contato<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mb-4">
+      <h4 class="mb-4 mt-4">Entre em contato</h4>
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="alert alert-success alert-dismissible fade d-none" role="alert">
+            Seu email foi enviado com sucesso
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+           <form class="needs-validation" novalidate>
+            <div class="form-group">
+              <label for="Nome">Nome</label>
+              <input type="text" class="form-control" id="Nome" required>
+              <div class="invalid-feedback">
+                Por favor, digite seu nome.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="Email">Email</label>
+              <input type="email" class="form-control" id="Email" placeholder="nome@exemplo.com" required>
+              <div class="invalid-feedback">
+                Por favor, digite seu email.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="Mensagem">Mensagem</label>
+              <textarea class="form-control" id="Mensagem" rows="3" required></textarea>
+              <div class="invalid-feedback">
+                Por favor, digite sua mensagem.
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary float-right">Enviar</button>
+          </form>
+        </div>
+
+        <div class="col-md-6 d-md-flex justify-content-center flex-column align-items-center">
+          <p>Social</p>
+          <nav class="nav">
+          <a class="nav-link" href="#">Instagram</a>
+          <a class="nav-link" href="#">Facebook</a>
+          <a class="nav-link text-decoration-none" href="#">Pinterest</a>
+        </nav>
+        </div>
+      </div> 
+    </div>
+
+    <footer class="bg-light mt-auto">
+      <div class="container text-center">
+        <p class="text-muted"> Desenvolvido por Cleviane Rebeca</p> 
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+              form.classList.add('was-validated');
+              //para que o formulário não desse reload na página e mostrasse o alerta, tive que criar esse código abaixo e colocar o add('was-validated) dentro do if.
+            } else {
+              $('.alert').removeClass('d-none').addClass('show');
+              $('form').trigger('reset');
+              form.classList.remove('was-validated');
+              event.preventDefault();
+              event.stopPropagation();
+            }
+
+          }, false);
+        });
+      }, false);
+    })();
+</script>
+  </body>
+</html>

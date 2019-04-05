@@ -1,0 +1,142 @@
+<!-- Dúvidas:
+  1. Apesar de recomendarem a tag "alt" nas imagens, eles não colocam na demonstração dos cards. O que devo fazer? (colocar e avisar que tive que colocar)
+  2. Tive que baixar o custom para ter acesso a classes de padding. Eles afirmam que deve ser usado apenas em protótipos, então posso usar mesmo? ( sim e avisar que tive que baixar)
+  3. Eles possuem um plugin para validação de formulário, posso usar? ( sim e avisar)
+-->
+
+<!doctype html>
+<html class="no-js height-100" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body class="position-relative" style="min-height: 100%">
+        <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+
+        <!-- <div class="top-bar"> -->
+            <!-- <div class="top-bar grid-container width-100" id="responsive-menu"> -->
+            <div class="top-bar" id="responsive-menu">
+              <div class="top-bar-left">
+                <ul class="menu">
+                  <li class="menu-text">Cleviane Rebeca</li>
+                </ul>
+              </div>
+              <div class="top-bar-right">
+                <ul class="menu">
+                  <li class="is-active"><a href="inicio.html">Início</a></li>
+                  <li><a href="sobre.html">Sobre</a></li>
+                  <li><a href="contato.html">Contato</a></li>
+                </ul>
+              </div>
+            </div>
+        <!-- </div> -->
+        
+        <div class="grid-container full text-center padding-3">
+          <h2>Olá, Sou Designer de Interfaces</h2>
+          <p class="lead">Estou no mercado há 3 anos! Explore meu portfólio para conhecer mais</p>
+        </div>
+
+        <div class="grid-container padding-bottom-3">
+          <h3>Projetos</h3>
+            <div class="grid-x grid-padding-x medium-up-2 large-up-4">
+              <div class="cell">
+                <div class="card">
+                  <img src="https://cdn.pixabay.com/photo/2017/05/09/21/49/gecko-2299365_960_720.jpg">
+                  <div class="card-section">
+                  <h4>Projeto 1</h4>
+                  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <button class="hollow button" data-open="projeto1Modal">Ver Mais</button>
+                  </div>
+                </div>
+              </div>
+              <div class="cell">
+                <div class="card">
+                  <img src="https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg">
+                  <div class="card-section">
+                    <h4>Projeto 2</h4>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <button class="hollow button" data-open="projeto2Modal">Ver Mais</button>
+                  </div>
+                </div>
+              </div>
+              <div class="cell">
+                <div class="card">
+                  <img src="https://cdn.pixabay.com/photo/2018/10/30/16/06/water-lily-3784022__340.jpg">
+                  <div class="card-section">
+                    <h4>Projeto 3</h4>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <button class="hollow button" data-open="projeto3Modal">Ver Mais</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cell">
+                  <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2018/02/09/21/46/rose-3142529__340.jpg">
+                    <div class="card-section">
+                      <h4>Projeto 4</h4>
+                      <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button class="hollow button" data-open="projeto4Modal">Ver Mais</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        
+          <div class="reveal" id="projeto1Modal" data-reveal aria-labelledby="exampleModalHeader11">
+              <h2 id="exampleModalHeader11">Projeto 1</h1>
+              <img class="width-100" src="https://cdn.pixabay.com/photo/2017/05/09/21/49/gecko-2299365_960_720.jpg">
+              <p class="margin-top-1">Some quick example text to build on the card title and make up the bulk of the modal content. 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus consectetur consectetur. Nullam tempus purus libero, ac tincidunt dui pretium vitae. Morbi commodo feugiat feugiat. Morbi in massa scelerisque, ullamcorper velit vitae, porta mauris. Integer sit amet sollicitudin tortor, maximus ultrices dui. Vestibulum sem turpis, vestibulum sit amet ullamcorper in, ultrices sed dui. Sed et ornare libero.</p>
+              <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+
+
+          <div class="reveal" id="projeto2Modal" data-reveal aria-labelledby="exampleModalHeader11">
+              <h1 id="exampleModalHeader11">Projeto 2</h1>
+              <img class="width-100" src="https://cdn.pixabay.com/photo/2016/10/27/22/53/heart-1776746_960_720.jpg">
+              <p class="margin-top-1">Some quick example text to build on the card title and make up the bulk of the modal content. 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus consectetur consectetur. Nullam tempus purus libero, ac tincidunt dui pretium vitae. Morbi commodo feugiat feugiat. Morbi in massa scelerisque, ullamcorper velit vitae, porta mauris. Integer sit amet sollicitudin tortor, maximus ultrices dui. Vestibulum sem turpis, vestibulum sit amet ullamcorper in, ultrices sed dui. Sed et ornare libero.</p>
+              <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+
+          <div class="reveal" id="projeto3Modal" data-reveal aria-labelledby="exampleModalHeader11">
+              <h1 id="exampleModalHeader11">Projeto 3</h1>
+              <img class="width-100" src="https://cdn.pixabay.com/photo/2018/10/30/16/06/water-lily-3784022__340.jpg">
+              <p class="margin-top-1">Some quick example text to build on the card title and make up the bulk of the modal content. 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus consectetur consectetur. Nullam tempus purus libero, ac tincidunt dui pretium vitae. Morbi commodo feugiat feugiat. Morbi in massa scelerisque, ullamcorper velit vitae, porta mauris. Integer sit amet sollicitudin tortor, maximus ultrices dui. Vestibulum sem turpis, vestibulum sit amet ullamcorper in, ultrices sed dui. Sed et ornare libero.</p>
+              <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+
+          <div class="reveal" id="projeto4Modal" data-reveal aria-labelledby="exampleModalHeader11">
+              <h1 id="exampleModalHeader11">Projeto 4</h1>
+              <img class="width-100" src="https://cdn.pixabay.com/photo/2018/02/09/21/46/rose-3142529__340.jpg">
+              <p class="margin-top-1">Some quick example text to build on the card title and make up the bulk of the modal content. 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus consectetur consectetur. Nullam tempus purus libero, ac tincidunt dui pretium vitae. Morbi commodo feugiat feugiat. Morbi in massa scelerisque, ullamcorper velit vitae, porta mauris. Integer sit amet sollicitudin tortor, maximus ultrices dui. Vestibulum sem turpis, vestibulum sit amet ullamcorper in, ultrices sed dui. Sed et ornare libero.</p>
+              <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+
+          <footer class="text-center position-absolute width-100 padding-1" style="bottom:0; left:0">
+            <p class="margin-0">Desenvolvido por Cleviane Rebeca</p>
+          </footer>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js height-100" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="foundation-icons/foundation-icons.css" />
+  </head>
+  <body class="position-relative" style="min-height: 100%">
+      <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <!-- <div class="top-bar"> -->
+            <!-- <div class="top-bar grid-container width-100" id="responsive-menu"> -->
+            <div class="top-bar" id="responsive-menu">
+              <div class="top-bar-left">
+                <ul class="menu">
+                  <li class="menu-text">Cleviane Rebeca</li>
+                </ul>
+              </div>
+              <div class="top-bar-right">
+                <ul class="menu">
+                  <li><a href="inicio.html">Início</a></li>
+                  <li><a href="sobre.html">Sobre</a></li>
+                  <li class="is-active"><a href="contato.html">Contato</a></li>
+                </ul>
+              </div>
+            </div>
+        <!-- </div> -->
+
+        <div class="grid-container margin-top-2 padding-bottom-3">
+          <h3>Entre em contato</h3>
+            <div class="grid-x large-up-2 grid-padding-x align-middle">
+                <div class="cell">
+                  
+                    <form data-abide novalidate>
+                        <div data-abide-error class="alert callout danger" style="display: none;">
+                            <p><i class="fi-alert"></i>Existem alguns erros no seu formulário</p>
+                        </div>
+
+                        <div class="alert callout success" style="display: none;">
+                            <p>Sua mensagem foi enviada com sucesso !</p>
+                        </div>
+
+                        <div>
+                            <label>Nome
+                            <input type="text" aria-errormessage="example1Error1" required pattern="alpha">
+                              <span class="form-error" id="example1Error1">
+                                 Digite seu nome
+                              </span>
+                            </label>
+                        </div>
+
+                        <div>
+                            <label>Email
+                            <input type="email" aria-errormessage="example1Error2" placeholder="nome@exemplo.com" required pattern="email">
+                            <span class="form-error" id="example1Error2">
+                                Digite seu email
+                             </span>
+                            </label>
+                        </div>
+
+                        <div>
+                            <label> Mensagem
+                                <textarea required></textarea>
+                                <span class="form-error" id="example1Error3">
+                                    Digite sua mensagem
+                                 </span>
+                            </label>
+                        </div>
+                        <button class="button float-right" type="submit" value="Enviar">Enviar</button>
+                    </form>
+                </div>
+
+                <div class="cell">
+                    <p class="text-center">Social</p>
+                    <ul class="menu align-center icons icon-top">
+                        <li><a href="#"><i class="fi-social-facebook"></i> <span>Facebook</span></a></li>
+                        <li><a href="#"><i class="fi-social-instagram"></i> <span>Instagram</span></a></li>
+                        <li><a href="#"><i class="fi-social-pinterest"></i> <span>Pinterest</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <footer class="text-center position-absolute width-100 padding-1" style="bottom:0; left:0">
+          <p class="margin-0">Desenvolvido por Cleviane Rebeca</p>
+        </footer>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        $(document).on("submit", function(ev) {
+            $('form').trigger('reset');
+            $('.success').css('display', 'block');
+            $('.danger').css('display', 'none');
+            ev.preventDefault();
+            
+            
+          });
+    </script>
+  </body>
+</html>
