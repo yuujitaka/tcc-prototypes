@@ -7,21 +7,24 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ListItem from '@material-ui/core/ListItem';
+import { withStyles } from '@material-ui/core/styles';
 import './App.css';
 
 import Inicio from './pages/Inicio/inicio'
+import Sobre from './pages/sobre'
 
-function Index() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}
+// const styles = {
+//   root: {
+//     flexGrow: 1,
+//   },
+//   grow: {
+//     flexGrow: 1,
+//   },
+//   menuButton: {
+//     marginLeft: -12,
+//     marginRight: 20,
+//   },
+// };
 
 const App = () => (
   <Router>
@@ -34,27 +37,39 @@ const App = () => (
           <Typography variant="h6" color="inherit">
             Joana Barros
           </Typography>
-          {/* <Button color="inherit" to="/about">
-            <Link to="/about">Public Page</Link>
-          </Button> */}
-          {/* <NavLink to="/about" activeClassName="selected">
-          about
-          </NavLink> */}
-         {/* <ListItem button component={Link} to="/about">SOBRE</ListItem> */}
          <Button 
           button
          component={Link}
           color="inherit" 
-          to="/about">
+          to="/">
+          Início
+        </Button>
+
+         <Button 
+          button
+         component={Link}
+          color="inherit" 
+          to="/sobre">
           Sobre
+        </Button>
+
+        <Button 
+          button
+         component={Link}
+          color="inherit" 
+          to="/contato">
+          Contato
         </Button>
             
         </Toolbar>
       </AppBar>
 
-      <Route path="/" exact component={Inicio} />
-      <Route path="/about/" component={About} />
-      <Route path="/users/" component={Users} />
+      <div style={{padding: '24px'}}>
+        <Route path="/" exact component={Inicio} />
+        <Route path="/sobre/" component={Sobre} />
+        {/* <Route path="/users/" component={Contato} /> */}
+      </div>
+      
     </div>
   </Router>
 );

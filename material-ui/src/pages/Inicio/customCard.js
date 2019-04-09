@@ -6,19 +6,34 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import CustomizedDialogDemo from './customModal';
+import { withStyles } from '@material-ui/core/styles';
 
+const styles = {
+    card: {
+      maxWidth: 345,
+    },
+    media: {
+    // ⚠️ object-fit is not supported by IE 11.
+    objectFit: 'cover',
+    }
+};
+  
 class CustomCard extends React.Component {
     state = {
         openModal : false,
     }
 
     render () {
-        const { title, modalTitle } = this.props;
+        const { title, textCard, textModal,img, classes } = this.props;
         return (
             <React.Fragment>
-                <Card>
+                <Card className={classes.card}>
                     <CardMedia
-                        image="/static/images/cards/contemplative-reptile.jpg"
+                        component="img"
+                        alt="Contemplative Reptile"
+                        className={classes.media}
+                        height="140"
+                        image={img}
                         title="Contemplative Reptile"
                     />
                     <CardContent>
@@ -26,12 +41,11 @@ class CustomCard extends React.Component {
                             {title}
                         </Typography>
                         <Typography component="p">
-                            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                            across all continents except Antarctica
+                            {textCard}
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button onClick={() => this.setState({openModal : true})} size="small" color="primary">
+                        <Button onClick={() => this.setState({openModal : true})} size="small" variant="outlined" color="primary">
                             Ver mais
                         </Button>
                     </CardActions>
@@ -39,8 +53,9 @@ class CustomCard extends React.Component {
                 <CustomizedDialogDemo 
                     open={this.state.openModal}
                     onClose={() => this.setState({openModal : false})}
-                    title={modalTitle}
-                    textContent={"rebeca e lucasxcxzcddfdfddasdasdasdasdasd"}
+                    title={title}
+                    textContent={textModal}
+                    img={img}
                 />
             </React.Fragment>
 
@@ -48,4 +63,4 @@ class CustomCard extends React.Component {
     }
 }
 
-export default CustomCard;
+export default withStyles(styles)(CustomCard);

@@ -52,7 +52,7 @@ const DialogActions = withStyles(theme => ({
 
 class CustomizedDialogDemo extends React.Component {
   render() {
-    const { title, textContent, open, onClose } = this.props;
+    const { title, textContent, open, onClose, img } = this.props;
     return (
       <div>
         <Dialog
@@ -64,6 +64,7 @@ class CustomizedDialogDemo extends React.Component {
             {title}
           </DialogTitle>
           <DialogContent>
+            <img src={img} style={{maxWidth: '100%', height: 'auto'}}></img>
             <Typography gutterBottom>
               {textContent}
             </Typography>
