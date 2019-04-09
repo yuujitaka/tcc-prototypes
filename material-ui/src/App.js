@@ -12,6 +12,7 @@ import './App.css';
 
 import Inicio from './pages/Inicio/inicio'
 import Sobre from './pages/sobre'
+import Contato from './pages/Contato/contato'
 
 // const styles = {
 //   root: {
@@ -67,7 +68,7 @@ const App = () => (
       <div style={{padding: '24px'}}>
         <Route path="/" exact component={Inicio} />
         <Route path="/sobre/" component={Sobre} />
-        {/* <Route path="/users/" component={Contato} /> */}
+        <Route path="/contato/" component={Contato} />
       </div>
       
     </div>
