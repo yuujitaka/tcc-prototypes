@@ -39,7 +39,7 @@ const App = () => (
             Joana Barros
           </Typography>
          <Button 
-          button
+          // button
          component={Link}
           color="inherit" 
           to="/">
@@ -47,7 +47,7 @@ const App = () => (
         </Button>
 
          <Button 
-          button
+          // button
          component={Link}
           color="inherit" 
           to="/sobre">
@@ -55,7 +55,7 @@ const App = () => (
         </Button>
 
         <Button 
-          button
+          // button
          component={Link}
           color="inherit" 
           to="/contato">
@@ -70,6 +70,8 @@ const App = () => (
         <Route path="/sobre/" component={Sobre} />
         <Route path="/contato/" component={Contato} />
       </div>
+
+      {/* <footer>Desenvolvido por Cleviane Rebeca</footer> */}
       
     </div>
   </Router>
