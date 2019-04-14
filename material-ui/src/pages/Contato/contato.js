@@ -6,8 +6,10 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import Button from '@material-ui/core/Button';
 import SimpleSnackbar from './snackbar';
-import green from '@material-ui/core/colors/green';
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import Link from '@material-ui/core/Link';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+// import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 
 class Contato extends React.Component{
 
@@ -21,7 +23,7 @@ class Contato extends React.Component{
     handleSubmit = (event) => {
         event.preventDefault();
 
-        if (event.target.reportValidity() == false){
+        if (event.target.reportValidity() === false){
             console.log("tá errado");
         } else {
             this.setState({open: true}); 
@@ -97,13 +99,29 @@ class Contato extends React.Component{
                         </form>   
                     </Grid>
 
-                    <Grid item md={6}>
-                        Social
-                        <MenuList>
-                            <MenuItem>Profile</MenuItem>
-                            <MenuItem>My account</MenuItem>
-                            <MenuItem>Logout</MenuItem>
-                        </MenuList>
+                    <Grid item md={6} style={{display:'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+                        <Typography variant="h6" gutterBottom>
+                            Social
+                        </Typography>
+
+                        {/* <MenuList component="nav">
+                            <MenuItem><Link href="https://www.instagram.com/">Instagram</Link></MenuItem>
+                            <MenuItem><Link href="https://www.facebook.com/">Facebook</Link></MenuItem>
+                            <MenuItem><Link href="https://br.pinterest.com/">Pinterest</Link></MenuItem>
+                        </MenuList> */}
+
+                        <List component="nav" style={{display:'flex'}}>
+                            <ListItem>
+                                <Link href="https://www.instagram.com/">Instagram</Link>
+                            </ListItem>
+                            <ListItem>
+                                <Link href="https://www.facebook.com/">Facebook</Link>
+                            </ListItem>
+                            <ListItem>
+                                <Link href="https://br.pinterest.com/">Pinterest</Link>
+                            </ListItem>
+                        </List>
+
                     </Grid>
                 </Grid>
 

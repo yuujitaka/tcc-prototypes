@@ -10,7 +10,8 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
     card: {
-      maxWidth: 345,
+        // maxWidth: 345,
+        // margin: 'auto'
     },
     media: {
     // ⚠️ object-fit is not supported by IE 11.
@@ -24,17 +25,17 @@ class CustomCard extends React.Component {
     }
 
     render () {
-        const { title, textCard, textModal,img, classes } = this.props;
+        const { title, textCard, textModal,alt, classes } = this.props;
         return (
             <React.Fragment>
                 <Card className={classes.card}>
                     <CardMedia
                         component="img"
-                        alt="Contemplative Reptile"
+                        alt={alt}
                         className={classes.media}
                         height="140"
-                        image={img}
-                        title="Contemplative Reptile"
+                        image={require('../../img/sem_foto.png')}
+                        title="Título da imagem"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -55,7 +56,8 @@ class CustomCard extends React.Component {
                     onClose={() => this.setState({openModal : false})}
                     title={title}
                     textContent={textModal}
-                    img={img}
+                    // img="../../img/sem_foto.png"
+                    alt={alt}
                 />
             </React.Fragment>
 
