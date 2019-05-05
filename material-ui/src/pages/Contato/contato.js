@@ -99,7 +99,7 @@ class Contato extends React.Component{
                         </form>   
                     </Grid>
 
-                    <Grid item md={6} style={{display:'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+                    <Grid item md={6} style={{display:'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', width: '100%'}}>
                         <Typography variant="h6" gutterBottom>
                             Social
                         </Typography>
