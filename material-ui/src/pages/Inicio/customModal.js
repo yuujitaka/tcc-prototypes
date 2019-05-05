@@ -63,7 +63,7 @@ class CustomizedDialogDemo extends React.Component {
             {title}
           </DialogTitle>
           <DialogContent>
-            <img src={require('../../img/sem_foto.png')} style={{maxWidth: '100%', height: 'auto'}} alt={alt}></img>
+            <img src={require('../../img/sem_foto.png')} style={{maxWidth: '100%', height: 'auto', width: '100%'}} alt={alt}></img>
             <Typography gutterBottom>
               {textContent}
             </Typography>
