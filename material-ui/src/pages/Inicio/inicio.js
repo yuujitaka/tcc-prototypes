@@ -22,7 +22,7 @@ const Inicio = () => (
         </Typography>
 
         <Grid container spacing={16}>
-            <Grid item sm={12} md={6} lg={3}>
+            <Grid item xs={12} md={6} lg={3}>
                 <CustomCard 
                     title={"Projeto 1"}
                     textCard={"Some quick example text to build on the card title and make up the bulk of the card's content."}
@@ -31,7 +31,7 @@ const Inicio = () => (
                 />
             </Grid>
 
-            <Grid item sm={12} md={6} lg={3}>
+            <Grid item xs={12} md={6} lg={3}>
                 <CustomCard 
                     title={"Projeto 2"}
                     textCard={"Some quick example text to build on the card title and make up the bulk of the card's content."}
@@ -40,7 +40,7 @@ const Inicio = () => (
                 />
             </Grid>
             
-            <Grid item sm={12} md={6} lg={3}>
+            <Grid item xs={12} md={6} lg={3}>
                 <CustomCard 
                     title={"Projeto 3"}
                     textCard={"Some quick example text to build on the card title and make up the bulk of the card's content."}
@@ -49,7 +49,7 @@ const Inicio = () => (
                 />
             </Grid>
 
-            <Grid item sm={12} md={6} lg={3}>
+            <Grid item xs={12} md={6} lg={3}>
                 <CustomCard 
                     title={"Projeto 4"}
                     textCard={"Some quick example text to build on the card title and make up the bulk of the card's content."}
