@@ -1,8 +1,6 @@
 # tcc-prototypes
 <h1>Sobre o Projeto</h1>
-
-<h1></h1>
-Este repositório possui os protótipos desenvolvidos para o Trabalho de Conclusão do curso de Sistemas e Mídias Digitais da Universidade Federal do Ceará. 
+Este repositório possui os protótipos desenvolvidos em um Trabalho de conclusão do curso de Sistemas e Mídias Digitais da Universidade Federal do Ceará. 
 Foi implementado um portfólio em três frameworks de front-end responsivos: Bootstrap, Foundation e Material-UI.
 
 <h1>Como Visualizar?</h1>
